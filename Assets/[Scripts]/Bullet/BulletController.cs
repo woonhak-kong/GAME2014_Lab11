@@ -20,8 +20,6 @@ public class BulletController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        Activate();
     }
 
     // Update is called once per frame

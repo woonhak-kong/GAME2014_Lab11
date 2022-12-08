@@ -217,7 +217,7 @@ public class PlayerBehavior : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Trigger");
-        if (other.gameObject.CompareTag("Hazard"))
+        if (other.gameObject.CompareTag("Hazard") || other.gameObject.CompareTag("Bullet"))
         {
             health.TakeDamage(30);
             if (lifeCounter.value > 0)

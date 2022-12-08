@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Platform
   - Enemy
+  - Hazard
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - Marker
   - Enemy
   - Hazard
-  - 
-  - 
+  - Bullet
+  - Confiner
   - 
   - 
   - 
