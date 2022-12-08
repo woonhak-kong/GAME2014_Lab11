@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2139874093
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 02190a2717261b8489a78477039ed6b7, type: 3}
   m_Color: {r: 1, g: 0, b: 0.07817793, a: 1}
@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 43314852}
   - component: {fileID: 43314854}
   - component: {fileID: 43314853}
+  - component: {fileID: 5500619501146734758}
   m_Layer: 0
   m_Name: PlayerDetection
   m_TagString: Untagged
@@ -152,6 +153,24 @@ MonoBehaviour:
   LOS: 0
   playerTransform: {fileID: 0}
   DirectionToPlayer: {x: 0, y: 0}
+--- !u!114 &5500619501146734758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43314851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3009b2ed8a83f454fb3ed61f55360e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasLOS: 0
+  fireDelay: 20
+  bulletSpawn: {fileID: 6908766539213148410}
+  targetOffset: {x: 0, y: 0}
+  bulletPrefabs: {fileID: 0}
+  bulletParent: {fileID: 0}
 --- !u!1 &1663705533144358026
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,6 +209,7 @@ Transform:
   - {fileID: 1663705533256375855}
   - {fileID: 43314852}
   - {fileID: 11615020}
+  - {fileID: 6908766539213148410}
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -413,6 +433,37 @@ Transform:
   m_GameObject: {fileID: 1663705534448268997}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.177, y: -0.016, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1663705533144358133}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2321989561389547251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6908766539213148410}
+  m_Layer: 10
+  m_Name: BulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6908766539213148410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2321989561389547251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.271, y: 0.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
