@@ -7,5 +7,6 @@ public enum Channel
     JUMP,
     HIT,
     DEATH,
+    BULLET,
     BGM
 }

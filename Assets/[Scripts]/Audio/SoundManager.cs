@@ -41,7 +41,10 @@ public class SoundManager : MonoBehaviour
         audioClips.Add(Resources.Load<AudioClip>("Sounds/jump"));
         audioClips.Add(Resources.Load<AudioClip>("Sounds/hit"));
         audioClips.Add(Resources.Load<AudioClip>("Sounds/death"));
+        audioClips.Add(Resources.Load<AudioClip>("Sounds/bullet"));
         audioClips.Add(Resources.Load<AudioClip>("Sounds/main_sound"));
+        
+
     }
 
     public void PlaySoundFX(SoundFX sound, Channel channel)

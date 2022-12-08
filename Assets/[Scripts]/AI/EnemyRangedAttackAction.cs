@@ -13,9 +13,12 @@ public class EnemyRangedAttackAction : MonoBehaviour, Action
     public GameObject bulletPrefabs;
     public Transform bulletParent;
 
+    private SoundManager soundManager;
+
     private void Awake()
     {
         bulletPrefabs = Resources.Load<GameObject>("Prefabs/Bullet");
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     // Update is called once per frame
@@ -38,6 +41,7 @@ public class EnemyRangedAttackAction : MonoBehaviour, Action
         var bullet = Instantiate(bulletPrefabs, bulletSpawn.position, Quaternion.identity, bulletParent);
         bullet.GetComponent<BulletController>().Activate();
         // toto: bullet sound
+        soundManager.PlaySoundFX(SoundFX.BULLET, Channel.BULLET);
     }
 
 }

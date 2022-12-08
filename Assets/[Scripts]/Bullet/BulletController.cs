@@ -20,7 +20,7 @@ public class BulletController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        direction = (GameObject.FindWithTag("Player").transform.position - transform.position).normalized;
+        
         Activate();
     }
 
@@ -37,6 +37,7 @@ public class BulletController : MonoBehaviour
 
     public void Activate()
     {
+        direction = (GameObject.FindWithTag("Player").transform.position - transform.position).normalized;
         Rotate();
         Move();
         Invoke("DestroyYourself", 2.0f);
